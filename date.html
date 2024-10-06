@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>js date </h1>
+    <p id="data"></p>
+    <script>
+           let data=document.getElementById("data");
+
+
+var x=0;
+function data_time(){
+    var x=new Date()
+    // data.innerHTML=x ; //all seen in html
+    // data.innerHTML=x.toDateString();//for date 
+    // data.innerHTML=x.toTimeString();//for time
+    // data.innerHTML=x.toUTCString(); //unitted states 
+    data.innerHTML=x.toUTCString();
+    }
+setInterval(data_time,'1000');
+    </script>
+</body>
+</html>

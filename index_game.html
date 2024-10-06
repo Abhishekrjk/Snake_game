@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car racing</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    
+    <h1>car racing all keyevent</h1>
+<div class="outer">
+
+    <div class="vid">
+        <video src="gave_video2.mp4" controls autoplay loop ></video>
+    </div>
+    <div class="img">
+        <img src="/car3.png" alt="" id="img">
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+    document.addEventListener('keydown',event => {
+        console.log(event.code);
+        var car=document.querySelector("#img");
+        var d='KeyD';
+        var a='KeyA';
+        car.style.position='absolute';
+        switch(event.code){
+            case d:car.style.left=parseInt(car.style.left||0)+10+'px';
+            break;
+            case a:car.style.left=parseInt(car.style.left||0)-10+'px';
+            break;
+        }
+        if(car.style.left>(80+'px'))
+        {
+            alert('crash');
+        }
+        if(car.style.left>(-180+'px'))
+        {
+            alert('crash');
+        }
+    
+    })
+    </script>
+        
+    </body>
+    </html>
